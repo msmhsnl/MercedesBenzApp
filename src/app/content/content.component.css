@@ -1,0 +1,32 @@
+/*MODEL MENU*/
+
+.container {
+  padding-top: 220px;
+}
+
+.model-menu-item {
+  border-left: 1px solid #333;
+  padding: 8px 16px;
+  color: #333;
+}
+
+.model-menu-item:first-child {
+  border: none !important;
+}
+
+.model-menu-item:hover {
+  cursor: pointer;
+  color: #00adef;
+}
+
+.active {
+  color: #00adef;
+}
+
+/*PRODUCT SECTION*/
+
+.main-container {
+  margin-top: 60px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
