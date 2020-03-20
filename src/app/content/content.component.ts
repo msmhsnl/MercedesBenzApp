@@ -5,7 +5,12 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.css']
 })
+
 export class ContentComponent implements OnInit {
+
+  modelMenuItems=document.getElementsByClassName("model-menu-item");
+
+  
 
   constructor() { }
 

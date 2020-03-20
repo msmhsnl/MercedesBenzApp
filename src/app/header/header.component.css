@@ -61,8 +61,12 @@ nav {
   color: #fff;
 }
 
-.nav-link:hover {
+.nav-link:hover{
   color: #00adef;
+  cursor: pointer;
+}
+.nav-link:hover i{
+  border-color:#00adef ;
 }
 .nav-link span{
   background-color: #fff;
@@ -88,6 +92,7 @@ nav {
   transform: rotate(-135deg);
   -webkit-transform: rotate(-135deg);
   margin: -2px 10px;
+  border-color: #00adef;
 }
 
 .submenu {
@@ -102,4 +107,13 @@ nav {
   align-items: center;
   font-size: 15px;
   color: #fff;
+}
+
+.display-none{
+  display: none;
+}
+
+.submenu-item:hover{
+  color: #00adef !important;
+  cursor: pointer;
 }

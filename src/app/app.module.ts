@@ -6,6 +6,7 @@ import { ProductComponent } from './product/product.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContentComponent } from './content/content.component';
+import { ProductsComponent } from './products/products.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { ContentComponent } from './content/content.component';
     ProductComponent,
     HeaderComponent,
     FooterComponent,
-    ContentComponent
+    ContentComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule
