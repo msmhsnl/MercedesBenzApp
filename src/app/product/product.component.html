@@ -1,17 +1,17 @@
 <div class="container">
-  <div class="card" *ngFor="let product of products">
-    <div class="card-top">
-      <span id="product-model">{{product.Model}}</span>
-      <img id="product-img" src="{{product.ImgSrc}}" alt="">
+  <div class="card" *ngFor="let product of products; index as i">
+    <div class="card-top {{markerData[i].marker}}">
+      <span class="product-model {{markerData[i].display}}">{{product.Model}}</span>
+      <img class="product-img {{markerData[i].top}}" src="{{product.ImgSrc}}" alt="">
     </div>
-    <div class="card-bot">
-      <span id="product-name">{{product.Name}}</span>
-      <div id="product-status">
-        <div *ngIf="product.Discountable" id="discountable" class="pentagon">%</div>
-        <div *ngIf="product.IsNew" id="new" class="pentagon">Yeni</div>
+    <div class="card-bot"> 
+      <span class="product-name">{{product.Name}}</span>
+      <div class="product-status">
+        <div *ngIf="product.Discountable" class="pentagon discountable">%</div>
+        <div *ngIf="product.IsNew" class="pentagon new">Yeni</div>
       </div>
       <br>
-      <span id="product-slogan">{{product.Slogan}}</span>
+      <span class="product-slogan">{{product.Slogan}}</span>
     </div>
   </div>
 </div>
