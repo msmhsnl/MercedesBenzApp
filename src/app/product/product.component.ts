@@ -9,23 +9,24 @@ import { ProductService } from '../product.service';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-
+  @Input() sharedResponseData;
   products:Product[];
 
-  @Input() contentData;
-
-  constructor(private productService:ProductService) {}
-
-  GetProducts(model):void{
-    this.products=this.productService.GetProducts(model);
+  
+  
+  
+  constructor(private productService:ProductService) {
+    this.products=this.sharedResponseData;
   }
 
+  
+
   ngOnInit(): void {
-   
+    this.products=this.sharedResponseData;
   }
   ngOnChanges(): void {
     
-    this.GetProducts(this.contentData);
+   this.products=this.sharedResponseData;
   }
 
 }
