@@ -1,5 +1,9 @@
+.container{
+  flex-wrap: wrap;
+}
+
 .card {
-  width: 285px;
+  width: 25%;
   color: #333333;
   margin-top: 40px;
 }

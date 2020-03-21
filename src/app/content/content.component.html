@@ -1,32 +1,27 @@
 <div class="container model-menu">
-  <div class="model-menu-item active">
+  <div id="All" class="model-menu-item active" (click)="onClick($event)">
     <span>Tüm Modeller</span>
   </div>
-  <div class="model-menu-item">
+  <div id="Kompakt" class="model-menu-item" (click)="onClick($event)">
     <span>Kompakt</span>
   </div>
-  <div class="model-menu-item">
+  <div id="Sedan" class="model-menu-item" (click)="onClick($event)">
     <span>Sedan</span>
   </div>
-  <div class="model-menu-item">
+  <div id="Coupe" class="model-menu-item" (click)="onClick($event)">
     <span>Coupé</span>
   </div>
-  <div class="model-menu-item">
+  <div id="Cabriolet-Roadster" class="model-menu-item" (click)="onClick($event)">
     <span>Cabriolet/Roadster</span>
   </div>
-  <div class="model-menu-item">
+  <div id="SUV" class="model-menu-item" (click)="onClick($event)">
     <span>SUV</span>
   </div>
-  <div class="model-menu-item">
+  <div id="AMG" class="model-menu-item" (click)="onClick($event)">
     <span>AMG</span>
   </div>
 </div>
 <div class="main-container">
-<app-product></app-product>
-<app-product></app-product>
-<app-product></app-product>
-<app-product></app-product>
-<app-product></app-product>
-<app-product></app-product>
+<app-product [contentData]="sharedData"></app-product>
 </div>
 

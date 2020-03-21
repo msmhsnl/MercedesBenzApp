@@ -6,8 +6,7 @@ import { ProductComponent } from './product/product.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContentComponent } from './content/content.component';
-import { ProductsComponent } from './products/products.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,11 +14,11 @@ import { ProductsComponent } from './products/products.component';
     ProductComponent,
     HeaderComponent,
     FooterComponent,
-    ContentComponent,
-    ProductsComponent
+    ContentComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
