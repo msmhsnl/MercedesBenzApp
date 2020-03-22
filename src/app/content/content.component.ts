@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ProductService } from '../product.service';
-import { Product } from '../product';
+//import { Product } from '../product';
 
 
 @Component({
@@ -13,30 +13,43 @@ export class ContentComponent implements OnInit {
   
   modelMenuItems=document.getElementsByClassName("model-menu-item");
   
-  
-  
-  
-  sharedData="All";
+  senderData="All";
 
   public responseData;
+  
+  Delay(ms: number) {
+    return new Promise( resolve => setTimeout(resolve, ms) );
+  }
 
-  onClick(event){
+  Request(){
+    this.responseData=this.productService.GetProducts(this.senderData).subscribe(response=>this.responseData=response); 
+
+    this.Delay(1);//product.component renderinden önce request verisini alabilmek için.
+  }
+
+  OnClick(event){
+    
     var target=event.currentTarget;
-    this.sharedData=target.getAttribute("id").toString();
+
+    this.senderData=target.getAttribute("id").toString();
+
     for (let i = 0; i < this.modelMenuItems.length; i++) {
       this.modelMenuItems[i].setAttribute("class","model-menu-item")
     }
+
     target.setAttribute("class","model-menu-item active"); 
-    this.responseData=this.productService.GetProducts(this.sharedData).subscribe(response=>this.responseData=response);  
-    }
+
+    this.Request(); 
+ }
    
 
   constructor(private productService:ProductService) {
-    
+
+    this.Request();
   }
 
   ngOnInit(): void {
-    this.responseData=this.productService.GetProducts(this.sharedData);
+    
   }
   ngOnChanges(): void{
     

@@ -49,7 +49,7 @@
 
 .v-hidden{
  
- visibility: hidden;
+ display: none;
 }
 .img-down{
   margin-top: 35px !important;

@@ -10,7 +10,9 @@ export class HeaderComponent implements OnInit {
  arrowStatus:string="down";
  displayStatus:string="";
  submenuItem=document.getElementsByClassName("submenu-item");
+
  
+
  navClick():void{
    if(this.isActive==""){
     this.isActive="active";
