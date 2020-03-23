@@ -20,12 +20,24 @@
   </div>
   <div class="submenu {{displayStatus}}">
     <div class="container">
-      <div class="submenu-item d-flex" (click)="subClickFeatured()">
+      <div class="submenu-item d-flex active" (click)="subClickFeatured()">
         <span>Öne Çıkanlar</span>
       </div>
-      <div class="submenu-item d-flex active" (click)="subClickModels()">
+      <div class="submenu-item d-flex" (click)="subClickModels()">
         <span>Modeller</span>
       </div>
     </div>
   </div>
 </nav>
+<div class="white-space"></div>
+<div class="dropdown-models {{displayStatusDropdownM}}">
+  <div class="main-container">
+    <app-content></app-content>
+  </div>
+  <div class="white-space"></div>
+</div>
+<div class="dropdown-featured {{displayStatusDropdownF}}">
+  <div class="main-container">
+    <app-content [sharedSelectionData]="selectionData"></app-content>
+  </div>
+</div>

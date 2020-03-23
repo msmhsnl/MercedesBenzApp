@@ -1,4 +1,4 @@
-<div class="container model-menu">
+<div class="container model-menu {{controlResult}}">
   <div id="All" class="model-menu-item active" (click)="OnClick($event)">
     <span>Tüm Modeller</span>
   </div>
@@ -22,6 +22,5 @@
   </div>
 </div>
 <div class="main-container">
-<app-product [sharedResponseData]="responseData"></app-product>
+  <app-product [sharedResponseData]="responseData"></app-product>
 </div>
-

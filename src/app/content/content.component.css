@@ -1,7 +1,10 @@
 /*MODEL MENU*/
 
 .container {
-  padding-top: 220px;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
 }
 
 .model-menu-item {
@@ -21,6 +24,10 @@
 
 .active {
   color: #00adef;
+}
+
+.display-none{
+  display: none;
 }
 
 /*PRODUCT SECTION*/

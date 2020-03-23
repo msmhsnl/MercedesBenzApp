@@ -61,14 +61,16 @@ nav {
   color: #fff;
 }
 
-.nav-link:hover{
+.nav-link:hover {
   color: #00adef;
   cursor: pointer;
 }
-.nav-link:hover i{
-  border-color:#00adef ;
+
+.nav-link:hover i {
+  border-color: #00adef;
 }
-.nav-link span{
+
+.nav-link span {
   background-color: #fff;
   color: #000;
   font-size: 12px;
@@ -109,11 +111,33 @@ nav {
   color: #fff;
 }
 
-.display-none{
+
+
+.submenu-item:hover {
+  color: #00adef !important;
+  cursor: pointer;
+}
+
+/*DROPDOWN*/
+.visibility-none {
+  visibility: hidden;
+  height: 0 !important;
+  transition: all .2s linear;
+}
+
+.visibility-show {
+  visibility: show;
+  transition: all .2s linear;
+}
+
+.display-none {
   display: none;
 }
 
-.submenu-item:hover{
-  color: #00adef !important;
-  cursor: pointer;
+.dropdown-models {
+  width: 100%;
+  z-index: 4;
+  position: absolute;
+  min-height: 518px;
+  background-color: #fff;
 }

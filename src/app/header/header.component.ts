@@ -8,20 +8,26 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
  isActive:string="";
  arrowStatus:string="down";
- displayStatus:string="";
+ displayStatus:string="visibility-show";
+ displayStatusDropdownM:string="display-none";
+ displayStatusDropdownF:string="";
  submenuItem=document.getElementsByClassName("submenu-item");
 
- 
+ public selectionData;
 
  navClick():void{
    if(this.isActive==""){
     this.isActive="active";
     this.arrowStatus="up";
-    this.displayStatus="display-none"
+    this.displayStatus="visibility-none";
+    this.displayStatusDropdownM="";
+    this.displayStatusDropdownF="display-none";
+    this.selectionData="";
+    
    }else{
     this.isActive="";
     this.arrowStatus="down";
-    this.displayStatus=""
+    this.displayStatus="visibility-show";
     this.subClickFeatured();
    }
   }
@@ -29,16 +35,29 @@ export class HeaderComponent implements OnInit {
   subClickFeatured():void{
     this.submenuItem[0].setAttribute("class","submenu-item d-flex active");
     this.submenuItem[1].setAttribute("class","submenu-item d-flex");
+    this.displayStatusDropdownM="display-none";
+    this.displayStatusDropdownF="";
+    this.selectionData="Featured";
+    
   }
 
   subClickModels():void{
     this.submenuItem[0].setAttribute("class","submenu-item d-flex");
     this.submenuItem[1].setAttribute("class","submenu-item d-flex active");
+    this.displayStatusDropdownM="";
+    this.displayStatusDropdownF="display-none";
+    this.selectionData="";//buglanabilir TODO
+    
   }
 
-  constructor() { }
+  constructor() { 
+    this.selectionData="Featured";
+  }
 
   ngOnInit(): void {
+  }
+  ngOnChanges():void{
+    
   }
 
 }
