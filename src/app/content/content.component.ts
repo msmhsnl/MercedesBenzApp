@@ -22,13 +22,10 @@ export class ContentComponent implements OnInit {
   DataControl(){
       if(this.sharedSelectionData=="Featured"){
         this.controlResult="display-none";
-        this.Delay(10);
         this.Request(this.sharedSelectionData);
       }else{
         this.controlResult="";
-        this.Delay(10);
         this.Request(this.senderData);
-        this.Delay(10);
       }
   }
 
